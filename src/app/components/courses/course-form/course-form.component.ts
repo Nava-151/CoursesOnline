@@ -24,12 +24,10 @@ export class CourseFormComponent {
   constructor(private courseService: CourseService, private router: ActivatedRoute, private userService: UserService,private route:Router) {
     this.router.params.subscribe(params => {
       this.courseId = +params['id'];
-      console.log("course id" + this.courseId);
 
     });
     //2 routes one which get route with id and the second not
     if (this.courseId > 0) {
-      console.log(this.courseId);
       courseService.getCourseById(this.courseId).subscribe((data: Course) => {
         this.course = data
         this.populateForm({ title: this.course.title, description: this.course.description });
@@ -47,14 +45,12 @@ export class CourseFormComponent {
       this.route.navigate(['seeAll']);
   });
     else {
-      console.log(this.courseId);
       const id = this.userService.currentUser?.id as number;
       this.courseService.createCourse({
         id: this.courseId, title: this.courseForm.value.title, description: this.courseForm.value.description,
         teacherId: +(localStorage.getItem("userId") || "0"), lessons: []
       }).subscribe(data => {console.log(data)
       this.route.navigate(['seeAll']);
-      console.log("navigated?");
       
       }
     );

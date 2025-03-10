@@ -32,7 +32,6 @@ export class CourseService {
     return this.http.delete<void>(`http://localhost:3000/api/courses/${courseId}/unenroll`, { body: body });
   }
   getCourseById(id: number): Observable<Course> {
-    console.log("in get course by id");
 
     return this.http.get<Course>(`${this.apiUrl}/${id}`);
   }

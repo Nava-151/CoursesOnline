@@ -34,7 +34,6 @@ export class DisplayCourseComponent {
     public authService: AuthenticationService,
   ) 
   {
-    console.log("in constructor");
     
     this.router.params.subscribe(params => {
       this.courseId = +params['courseId'];

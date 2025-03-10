@@ -28,7 +28,6 @@ export class LessonFormComponent {
 
       
       if (this.lessonId > 0) {
-        console.log(this.lessonId);
         lessonService.getLessonById(this.lessonId).subscribe((data: Lesson) => {
           this.lesson = data;
           this.lesson = data

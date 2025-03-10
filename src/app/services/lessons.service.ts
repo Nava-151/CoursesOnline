@@ -14,7 +14,6 @@ export class LessonService {
   private apiUrl = 'http://localhost:3000/api/courses';
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {
-    console.log("in lessons service");
     this.route.params.subscribe(params => {
       const courseId = +params['courseId'];
     });

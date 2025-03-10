@@ -40,7 +40,6 @@ export class AllCoursesComponent  {
 
 
   showDetails(course: Course) {
-    console.log(course.id);
     this.router.navigate([`courses/${course.id}/lessons`]);
   }
 
