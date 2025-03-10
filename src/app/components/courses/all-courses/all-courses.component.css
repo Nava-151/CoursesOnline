@@ -1,0 +1,36 @@
+
+.course-list h2 {
+  color: #40e0d0;
+}
+
+.course-card {
+  border: 1px solid #40e0d0;
+  width: max-content;
+  margin:5%;
+}
+.course-card :hover{
+  width: 110%;
+  height: 110%;
+}
+
+.mat-button {
+  color: #40e0d0;
+  background-color: #40e0d0; /* Turquoise color for buttons */
+}
+
+.mat-icon {
+  color: #40e0d0; /* Icon color */
+}
+
+.mat-card-title {
+  color: #40e0d0; /* Turquoise color for the course title */
+}
+
+.mat-raised-button:hover {
+  background-color: rgba(64, 224, 208); /* Light turquoise on hover */
+}
+
+.mat-card-actions button {
+  margin: 5px;
+}
+

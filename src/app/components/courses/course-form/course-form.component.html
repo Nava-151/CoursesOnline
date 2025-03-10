@@ -1,0 +1,21 @@
+
+   <div class="course">
+    <div class="course-content">
+      <h2>Course Form</h2>
+  
+      <form [formGroup]="courseForm" (submit)="onSubmit()">
+        <input matInput formControlName="title" placeholder="Title" />
+        <input matInput formControlName="description" placeholder="Description" />
+  
+        <div class="form-actions">
+          <button mat-raised-button color="accent" type="submit">
+            <mat-icon>send</mat-icon> Send
+          </button>
+          <button mat-raised-button color="warn" (click)="closeModal()">
+            <mat-icon>close</mat-icon> Close
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
