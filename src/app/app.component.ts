@@ -5,7 +5,7 @@ import { AllCoursesComponent } from "./components/courses/all-courses/all-course
 import { routes } from './app.routes';
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, RouterOutlet],
+  imports: [RouterModule, RouterOutlet, LoginComponent],
     templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
