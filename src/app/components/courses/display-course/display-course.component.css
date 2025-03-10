@@ -1,42 +1,53 @@
-.course-list {
+/* Styling for the lessons list */
+.course-list h3 {
+    color: #40e0d0; /* Turquoise color */
+    text-align: center;
+  }
+  
+  /* Card styling */
+  .lesson-card {
+    border: 2px solid #40e0d0; /* Turquoise border */
+    background-color: #1e1e1e; /* Dark background */
+    color: white; /* White text */
+    padding: 15px;
+  }
+  
+  /* Text inside cards */
+  .lesson-card p {
+    color: white;
+  }
+  
+  /* Buttons */
+  .mat-button, .mat-raised-button {
+    color: white;
+    background-color: #40e0d0; /* Turquoise buttons */
+    border-radius: 5px;
+  }
+  
+  .mat-raised-button:hover {
+    background-color: #2bb3a3; /* Darker turquoise on hover */
+  }
+  
+  /* Special styles for warning buttons */
+  .mat-raised-button[color='warn'] {
+    background-color: #ff7043;
+    color: white;
+  }
+  
+  /* Icons */
+  .mat-icon {
+    color: white;
+    vertical-align: middle;
+  }
+  
+  .icon {
+    color: #40e0d0; /* Turquoise icons */
+    margin-right: 5px;
+  }
+  
+  .add-lesson-btn {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-mat-grid-list {
-    width: 100%;
-    max-width: 1200px;
-}
-
-mat-card {
-    width: 100%;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-mat-card:hover {
-    transform: scale(1.1); /* מגדיל את הכרטיס ב-10% */
-}
-
-mat-card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #3f51b5;
-}
-
-mat-card-content p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.mat-button {
-    margin: 5px;
-    background-color: black !important;
-    color: white !important;
-}
-
-button.mat-button {
-    font-weight: bold;
-}
+    justify-content: center;
+    margin-top: 20px;
+  }
+  

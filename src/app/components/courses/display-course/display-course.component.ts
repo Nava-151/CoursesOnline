@@ -6,10 +6,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AuthenticationService } from '../../../services/authentication.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-display-course',
-  imports: [MatCardModule, MatGridListModule, MatButtonModule, RouterModule],
+  imports: [MatCardModule, MatGridListModule, MatButtonModule, RouterModule,MatIconModule],
   templateUrl: './display-course.component.html',
   styleUrl: './display-course.component.css'
 })

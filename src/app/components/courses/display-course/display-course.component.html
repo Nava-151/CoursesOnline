@@ -1,12 +1,14 @@
-<h3>lessons List</h3>
+<h3>Lessons List</h3>
 <div class="course-list">
     <mat-grid-list cols="3" rowHeight="1:1" gutterSize="10px">
         @for ( lesson of lessons;track lesson.id) {
 
         <mat-grid-tile>
-            <mat-card>
+            <mat-card class="lesson-card">
                 <mat-card-header>
-                    <mat-card-title>{{ lesson.title }} (ID: {{ lesson.id }})</mat-card-title>
+                    <mat-card-title>
+                        <mat-icon class="icon">menu_book</mat-icon> {{ lesson.title }} (ID: {{ lesson.id }})
+                    </mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
                     <p>{{ lesson.content }}</p>
@@ -14,20 +16,26 @@
                 <mat-card-actions>
                     @if(authService.isTeacher==true)
                     {
-                    <button mat-raised-button color="primary" class="mat-button"
-                        (click)="updateLesson(lesson)">Update</button>
-                    <button mat-raised-button color="warn" class="mat-button"
-                        (click)="deleteLesson(lesson)">Delete</button>
+                    <button mat-raised-button color="primary" class="mat-button" (click)="updateLesson(lesson)">
+                        <mat-icon>edit</mat-icon> Update
+                    </button>
+                    <button mat-raised-button color="warn" class="mat-button" (click)="deleteLesson(lesson)">
+                        <mat-icon>delete</mat-icon> Delete
+                    </button>
                     }
-
                 </mat-card-actions>
             </mat-card>
         </mat-grid-tile>
 
         }
-        @if(authService.isTeacher==true)
-        {
+    </mat-grid-list>
 
-         <button mat-raised-button color="warn" class="mat-button" (click)="AddLesson()">Add lesson</button>
-
-        }
+    @if(authService.isTeacher==true)
+    {
+    <div class="add-lesson-btn">
+        <button mat-raised-button color="primary" class="mat-button" (click)="AddLesson()">
+            <mat-icon>add_circle_outline</mat-icon> Add Lesson
+        </button>
+    </div>
+    }
+</div>
